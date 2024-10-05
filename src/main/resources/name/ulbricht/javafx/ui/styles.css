@@ -1,0 +1,23 @@
+.root {
+    -fx-base: #000000;
+    -fx-background: #000000;
+    -fx-background-color: #202020;
+    -fx-control-inner-background: #101010;
+    -fx-text-fill: #ffffff;
+    -fx-accent: #f68a1f;
+    -fx-focus-color: #d67718;
+    -fx-selection-bar-non-focused: #d6771880;
+    -fx-font-size: 10pt;
+}
+
+.label {
+    -fx-text-fill: #ffffff;
+}
+
+.text-input {
+    -fx-prompt-text-fill: derive(-fx-control-inner-background,50%);
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: -fx-control-inner-background;
+}

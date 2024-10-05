@@ -1,0 +1,32 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "interactive",
+		"java.saveActions.organizeImports": true,
+		"java.saveActions.cleanup": true,
+		"java.cleanup.actions": [
+			// "qualifyMembers",
+			// "qualifyStaticMembers",
+			"addOverride",
+			"addDeprecated",
+			"stringConcatToTextBlock",
+			"invertEquals",
+			"addFinalModifier",
+			"instanceofPatternMatch",
+			"lambdaExpressionFromAnonymousClass",
+			"lambdaExpression",
+			"switchExpression",
+			"tryWithResource",
+			"renameFileToType",
+			"organizeImports"
+		],
+		"java.format.settings.url": ".vscode/formatter.xml",
+		"java.format.settings.profile": "Java",
+		"editor.defaultFormatter": "redhat.java",
+		"editor.formatOnSave": true
+	}
+}

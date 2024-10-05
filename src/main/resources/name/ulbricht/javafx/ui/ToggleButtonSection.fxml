@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+
+    <center>
+        <ScrollPane>
+            <HBox styleClass="default-hbox">
+                <fx:define>
+                    <ToggleGroup fx:id="toggle"/>
+                </fx:define>
+                <ToggleButton text="One" toggleGroup="$toggle" disable="${disableCheckBox.selected}"/>
+                <ToggleButton text="Two" toggleGroup="$toggle" selected="true" disable="${disableCheckBox.selected}"/>
+                <ToggleButton text="Three" toggleGroup="$toggle" disable="${disableCheckBox.selected}"/>
+            </HBox>
+        </ScrollPane>
+    </center>
+
+    <right>
+        <ScrollPane>
+            <VBox styleClass="default-vbox">
+                <CheckBox fx:id="disableCheckBox" text="Disable"/>
+            </VBox>
+        </ScrollPane>
+    </right>
+
+</BorderPane>

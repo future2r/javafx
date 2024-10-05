@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<?import name.ulbricht.javafx.ui.SectionItem?>
+<?import name.ulbricht.javafx.ui.SectionItemListCell?>
+
+<HBox fx:id="root" prefWidth="1000" prefHeight="700" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="name.ulbricht.javafx.ui.MainView">
+
+    <fx:define>
+        <FXCollections fx:id="sections" fx:factory="observableArrayList">
+            <SectionItem text="%MainView.section.button.text">
+                <image>
+                    <Image url="@/name/ulbricht/javafx/ui/img/section_button.png"/>
+                </image>
+                <content>
+                    <fx:include source="ButtonSection.fxml"/>
+                </content>
+            </SectionItem>
+            <SectionItem text="%MainView.section.toggleButton.text">
+                <image>
+                    <Image url="@/name/ulbricht/javafx/ui/img/section_toggle_button.png"/>
+                </image>
+                <content>
+                    <fx:include source="ToggleButtonSection.fxml"/>
+                </content>
+            </SectionItem>
+        </FXCollections>
+    </fx:define>
+
+    <stylesheets>
+        <URL value="@defaults.css"/>
+        <URL value="@MainView.css"/>
+    </stylesheets>
+
+    <VBox fx:id="navigationPane">
+        <HBox>
+            <ImageView>
+                <Image url="@/name/ulbricht/javafx/ui/img/app-64.png"/>
+            </ImageView>
+            <VBox alignment="center_left" HBox.hgrow="always">
+                <Label fx:id="titleLabel" text="%MainView.titleLabel.text"/>
+                <Label fx:id="subTitleLabel" text="%MainView.subTitleLabel.text"/>
+            </VBox>
+        </HBox>
+        <TextField fx:id="searchTextField" promptText="%MainView.searchTextField.promptText"/>
+        <ListView fx:id="sectionsListView" VBox.vgrow="always">
+            <items>
+                <fx:reference source="sections"/>
+            </items>
+            <cellFactory>
+                <SectionItemListCell fx:factory="forListView"/>
+            </cellFactory>
+        </ListView>
+    </VBox>
+
+    <VBox fx:id="sectionPane" HBox.hgrow="always">
+        <Label fx:id="sectionLabel"/>
+        <StackPane fx:id="sectionWrapper" VBox.vgrow="always"/>
+    </VBox>
+
+</HBox>

@@ -1,0 +1,18 @@
+#navigationPane {
+    -fx-padding: 1em .5em 1em 1em;
+    -fx-spacing: 1em;
+}
+
+#titleLabel {
+    -fx-font-weight: bold;
+}
+
+#sectionPane {
+    -fx-padding: 1em 1em 1em .5em;
+    -fx-spacing: 1em;
+}
+
+#sectionLabel {
+    -fx-font-size: 2em;
+    -fx-font-weight: bold;
+}

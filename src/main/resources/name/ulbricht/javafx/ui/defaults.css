@@ -1,0 +1,11 @@
+.default-grid-pane {
+    -fx-padding: .5em;
+    -fx-hgap: .5em;
+    -fx-vgap: .5em;
+}
+
+.default-hbox,
+.default-vbox {
+    -fx-padding: .5em;
+    -fx-spacing: .5em;
+}
